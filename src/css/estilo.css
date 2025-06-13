@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    padding: 25px;
+    background-color: antiquewhite;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+header h1{
+    display: flex;
+    justify-content: center;
+    color: rgb(65, 15, 15);
+}
+
+main{
+    padding: 30px;
+    background-color: rgb(184, 173, 159);
+}
+
+main p{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-right: 25px;
+}
+
+main p label{
+    font-weight: 700;
+}
+
+main p input{
+    border-radius: 10px;
+}
+
+#adicionar-tarefa{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#salvarTarefa{
+    padding: 10px;
+    border-radius: 5px;
+}

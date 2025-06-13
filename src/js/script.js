@@ -43,12 +43,18 @@ function adicionarTarefa(){
 function listarTarefas(){
     let valor = '';
     for(let i=0; i < tarefa.length; i++){
-        valor += tarefa[i] + '<br>';
+        valor += `
+        <div class="task-item">
+                <span>${tarefa[i]}</span>
+                <button onclick="editarTarefa(${i})">Editar</button>
+                <button id="remover-tarefa" onclick="removerTarefa()">Remover Tarefa</button>
+            </div>
+        `
     }
     document.getElementById("lista").innerHTML = valor
 }
 
-function removerTarefa(){
+function removerTarefa(i){
     // tarefa.pop();
     // listarTarefas();
     
@@ -62,7 +68,7 @@ function removerTarefa(){
         cancelButtonText: "Cancelar",
     }).then((result)=>{
         if(result.isConfirmed){
-            tarefa.pop();
+            tarefa.splice(i, 1);
             listarTarefas();
             Swal.fire(
                 "Apagado",
@@ -72,3 +78,38 @@ function removerTarefa(){
         }
     })
 }
+
+//FUNÇÃO EDITAR TAREFA
+
+function editarTarefa(indice){
+    document.getElementById("task").value = tarefa[indice];
+    indiceEditar = indice;
+    document.getElementById("task").focus();
+}
+
+//FUNÇÃO SALVAR TAREFA
+
+function salvarTarefa(){
+    if(validarCampo()){
+        alert("Preencha o campo tarefa")
+    }else if(indiceEditar !== -1){
+        tarefa[indiceEditar]=document.getElementById("task").value;
+        document.getElementById("task").value ="";
+        listarTarefas();
+        Swal.fire({
+            icon: "success",
+            title: "Sucesso!",
+            text: "Tarefa salva com sucesso",
+            confirmButtonColor: "#000000FF",
+            confirmButtonText: "OK",
+        });
+    }
+    else{
+        console.log("nenhuma tarefa selecionada")
+    }
+    document.getElementById("task").focus();
+    
+    
+}
+
+//FUNÇÃO
