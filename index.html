@@ -13,12 +13,19 @@
         <h1>Lista de Tarefas</h1>
     </header>
     <main>
-        <p>
+        <p id="tarefas-input">
             <label for="task">Tarefa: </label>
             <input type="text" id="task">
         </p>
-        <button id="adicionar-tarefa" onclick="adicionarTarefa()">Adicionar Tarefa</button>
-        <button id="salvarTarefa" onclick="salvarTarefa()">Salvar Tarefa</button>
+        <section class="btn-container">
+            <div id="adicionar-tarefa-container">
+                <button id="adicionar-tarefa" onclick="adicionarTarefa()">Adicionar Tarefa</button>
+            </div>
+            <div id="salvar-tarefa-container">
+                <button id="salvarTarefa" onclick="salvarTarefa()">Salvar Tarefa</button>
+            </div>
+        </section>
+        
         
         <p id="lista"></p> 
     </main>

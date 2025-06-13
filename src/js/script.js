@@ -46,7 +46,7 @@ function listarTarefas(){
         valor += `
         <div class="task-item">
                 <span>${tarefa[i]}</span>
-                <button onclick="editarTarefa(${i})">Editar</button>
+                <button id="editar-tarefa" onclick="editarTarefa(${i})">Editar</button>
                 <button id="remover-tarefa" onclick="removerTarefa()">Remover Tarefa</button>
             </div>
         `

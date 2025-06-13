@@ -21,30 +21,63 @@ header h1{
 
 main{
     padding: 30px;
-    background-color: rgb(184, 173, 159);
 }
 
-main p{
+#tarefas-input{
     padding: 20px;
     display: flex;
     justify-content: center;
-    margin-right: 25px;
+    gap: 10px;
 }
 
 main p label{
+    display: flex;
+    align-items: center;
     font-weight: 700;
 }
 
 main p input{
+    padding: 4px;
     border-radius: 10px;
+    width: 60%;
+}
+
+.btn-container{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    gap: 40px;
+}
+
+#adicionar-tarefa-container{
+    padding: 10px;
+}
+
+#salvar-tarefa-container{
+    padding: 10px;
 }
 
 #adicionar-tarefa{
+    background:transparent;
     padding: 10px;
     border-radius: 5px;
 }
 
+#adicionar-tarefa:hover{
+    background:rgb(145, 145, 145);
+}
+
 #salvarTarefa{
+    background: transparent;
     padding: 10px;
     border-radius: 5px;
 }
+
+
+#salvarTarefa:hover{
+    background:rgb(145, 145, 145);
+    padding: 10px;
+
+    border-radius: 5px;
+}
+
