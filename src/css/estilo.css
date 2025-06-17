@@ -21,6 +21,7 @@ header h1{
 
 main{
     padding: 30px;
+    margin: 100px;
 }
 
 #tarefas-input{
@@ -39,7 +40,7 @@ main p label{
 main p input{
     padding: 4px;
     border-radius: 10px;
-    width: 60%;
+    width: 38%;
 }
 
 .btn-container{
@@ -58,26 +59,65 @@ main p input{
 }
 
 #adicionar-tarefa{
-    background:transparent;
-    padding: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 0.5rem 0.75rem;
     border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 #adicionar-tarefa:hover{
-    background:rgb(145, 145, 145);
+    transform:  scale(1.1);
+    box-shadow: 0 0 8px rgba(3, 165, 43, 0.5);
 }
 
 #salvarTarefa{
-    background: transparent;
-    padding: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 0.5rem 0.75rem;
     border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 
 #salvarTarefa:hover{
-    background:rgb(145, 145, 145);
-    padding: 10px;
-
-    border-radius: 5px;
+    transform:  scale(1.1);
+    box-shadow: 0 0 8px rgba(0, 200, 255, 0.5);
 }
 
+.task-item{
+    margin: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+#editar-tarefa{
+    border-radius: 5px;
+    padding: 6px;
+    border: none;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+#editar-tarefa:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 8px #bbb803;
+
+}
+
+#remover-tarefa{
+    border-radius: 5px;
+    padding: 6px;
+    border: none;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+#remover-tarefa:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 8px #9c0808;
+}
