@@ -40,6 +40,18 @@ function adicionarTarefa(){
     }
 }
 
+//FUNCAO ADICIONAR TAREFA COM ENTER
+const taskInput =document.getElementById("task");
+
+if(taskInput){
+    taskInput.addEventListener('keypress',(e)=>{
+    if(e.key === 'Enter'){
+        e.preventDefault();
+        adicionarTarefa();
+    }
+})
+}
+
 function listarTarefas(){
     let valor = '';
     for(let i=0; i < tarefa.length; i++){
@@ -112,4 +124,6 @@ function salvarTarefa(){
     
 }
 
-//FUNÇÃO
+//FUNÇÃO ENTER
+
+

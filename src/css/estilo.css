@@ -9,8 +9,15 @@ header{
     background-color: antiquewhite;
 }
 
-body{
-    background-color: antiquewhite;
+.image-container img{
+    background-image: url('../assets/img/canyon.jpg');
+  background-size: cover;           /* Ajusta a imagem para cobrir toda a tela */
+  background-position: center;      /* Centraliza a imagem */
+  background-repeat: no-repeat;     /* Evita que a imagem se repita */
+  font-family: Arial, sans-serif;
+  color: white;                     /* Cor do texto para melhor contraste */
+  height: 100vh;                    /* Garante altura total da janela */
+  margin: 0;
 }
 
 header h1{
